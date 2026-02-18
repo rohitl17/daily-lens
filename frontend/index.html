@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DailyLens | Article Discovery</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="bg-shape bg-1"></div>
+    <div class="bg-shape bg-2"></div>
+
+    <header class="topbar">
+      <div>
+        <h1>News Feed Ranker</h1>
+        <p>Behavior-driven ranking from interactions + dwell time</p>
+      </div>
+      <div class="login-panel">
+        <label for="userSelect">Login as</label>
+        <select id="userSelect"></select>
+        <button id="loginBtn">Load Feed</button>
+      </div>
+    </header>
+
+    <main class="layout">
+      <aside class="affinity-card">
+        <h2>User Topic Affinity</h2>
+        <p class="muted">Live preference profile updates after each interaction.</p>
+        <ul id="affinityList"></ul>
+      </aside>
+
+      <section class="feed-area">
+        <div id="feed"></div>
+        <div id="status" class="status">Select a user to start.</div>
+        <div id="sentinel" class="sentinel"></div>
+      </section>
+    </main>
+
+    <template id="articleTemplate">
+      <article class="card">
+        <div class="meta-row">
+          <span class="subject"></span>
+          <span class="date"></span>
+        </div>
+        <h3 class="title"></h3>
+        <p class="summary"></p>
+        <div class="actions">
+          <button data-action="like">Like</button>
+          <button data-action="save">Save</button>
+          <button data-action="share">Share</button>
+          <button data-action="skip">Skip</button>
+        </div>
+      </article>
+    </template>
+
+    <script src="script.js" type="module"></script>
+  </body>
+</html>

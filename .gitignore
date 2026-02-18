@@ -1,0 +1,27 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.egg-info/
+.venv/
+venv/
+
+# Backend local env
+backend/.venv/
+
+# Node / Next.js
+node_modules/
+frontend-app/node_modules/
+.next/
+frontend-app/.next/
+out/
+
+# OS/editor
+.DS_Store
+.vscode/
+*.log
+
+# Build artifacts
+frontend-app/tsconfig.tsbuildinfo
